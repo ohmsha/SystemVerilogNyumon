@@ -1,0 +1,125 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 14:12:35  August 01, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		SLOT_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone 10 LP"
+set_global_assignment -name DEVICE 10CL010YE144C8G
+set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+
+set_global_assignment -name TOP_LEVEL_ENTITY SLOT
+
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:12:35  AUGUST 01, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+
+set_location_assignment PIN_91 -to CK
+set_location_assignment PIN_10 -to RB
+
+set_location_assignment PIN_32 -to PSW
+
+set_location_assignment PIN_71 -to SEG_0[7]
+set_location_assignment PIN_69 -to SEG_0[6]
+set_location_assignment PIN_70 -to SEG_0[5]
+set_location_assignment PIN_72 -to SEG_0[4]
+set_location_assignment PIN_65 -to SEG_0[3]
+set_location_assignment PIN_67 -to SEG_0[2]
+set_location_assignment PIN_66 -to SEG_0[1]
+set_location_assignment PIN_68 -to SEG_0[0]
+
+set_location_assignment PIN_59 -to SEG_1[7]
+set_location_assignment PIN_55 -to SEG_1[6]
+set_location_assignment PIN_58 -to SEG_1[5]
+set_location_assignment PIN_60 -to SEG_1[4]
+set_location_assignment PIN_51 -to SEG_1[3]
+set_location_assignment PIN_53 -to SEG_1[2]
+set_location_assignment PIN_52 -to SEG_1[1]
+set_location_assignment PIN_54 -to SEG_1[0]
+
+set_location_assignment PIN_38 -to LED[7]
+set_location_assignment PIN_39 -to LED[6]
+set_location_assignment PIN_42 -to LED[5]
+set_location_assignment PIN_43 -to LED[4]
+set_location_assignment PIN_44 -to LED[3]
+set_location_assignment PIN_46 -to LED[2]
+set_location_assignment PIN_49 -to LED[1]
+set_location_assignment PIN_50 -to LED[0]
+
+set_location_assignment PIN_31 -to BZ
+
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH sim_SLOT -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME sim_SLOT -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id sim_SLOT
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME sim_SLOT -section_id sim_SLOT
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/sim_SLOT.sv -section_id sim_SLOT
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name GENERATE_RBF_FILE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+
+
+
+set_global_assignment -name SYSTEMVERILOG_FILE code/seg_convert2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE code/BUZZER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE code/SLOT_CORE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE code/SLOT.sv
+set_global_assignment -name SOURCE_FILE db/SLOT.cmp.rdb
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT simulation/sim_SLOT.do -section_id eda_simulation
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

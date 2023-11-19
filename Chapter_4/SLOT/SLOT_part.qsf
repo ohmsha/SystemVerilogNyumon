@@ -1,0 +1,35 @@
+
+set_location_assignment PIN_91 -to CK
+set_location_assignment PIN_10 -to RB
+
+set_location_assignment PIN_32 -to PSW
+
+set_location_assignment PIN_71 -to SEG_0[7]
+set_location_assignment PIN_69 -to SEG_0[6]
+set_location_assignment PIN_70 -to SEG_0[5]
+set_location_assignment PIN_72 -to SEG_0[4]
+set_location_assignment PIN_65 -to SEG_0[3]
+set_location_assignment PIN_67 -to SEG_0[2]
+set_location_assignment PIN_66 -to SEG_0[1]
+set_location_assignment PIN_68 -to SEG_0[0]
+
+set_location_assignment PIN_59 -to SEG_1[7]
+set_location_assignment PIN_55 -to SEG_1[6]
+set_location_assignment PIN_58 -to SEG_1[5]
+set_location_assignment PIN_60 -to SEG_1[4]
+set_location_assignment PIN_51 -to SEG_1[3]
+set_location_assignment PIN_53 -to SEG_1[2]
+set_location_assignment PIN_52 -to SEG_1[1]
+set_location_assignment PIN_54 -to SEG_1[0]
+
+set_location_assignment PIN_38 -to LED[7]
+set_location_assignment PIN_39 -to LED[6]
+set_location_assignment PIN_42 -to LED[5]
+set_location_assignment PIN_43 -to LED[4]
+set_location_assignment PIN_44 -to LED[3]
+set_location_assignment PIN_46 -to LED[2]
+set_location_assignment PIN_49 -to LED[1]
+set_location_assignment PIN_50 -to LED[0]
+
+set_location_assignment PIN_31 -to BZ
+
