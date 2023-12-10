@@ -308,8 +308,8 @@ module cpu_top (
     assign uart_we = ((ex_alu_result == UART_TX_ADDR) && ex_is_store) ? ENABLE : DISABLE;
 
     ft232if uart (
-        .clk(clk),
-        .rst(rst),
+        .clock(clk),
+        .reset(rst),
         .FT_ADBUS,
         .FT_ACBUS,
         .rcv_data(uart_rd_data),
